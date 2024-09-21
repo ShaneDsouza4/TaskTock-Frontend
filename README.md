@@ -1,3 +1,24 @@
+# TaskTock Frontend
+
+The **TaskTock** frontend is a mobile-first web application built using **Angular**. It provides a user interface for freelancers to time, track, and manage their work increments. The app supports user authentication, task management, and a timer interface designed specifically for freelancers who charge by the hour.
+
+## Key Features
+
+- **Mobile-First Design**: Responsive design optimized for mobile users.
+- **Timer Interface**: Start, pause, and stop a timer to track working increments.
+- **Task Management**: View, create work-related tasks.
+- **JWT Authentication**: Secure login and registration system using JSON Web Tokens.
+- **Task Visualization**: Simple UI for tracking tasks and time worked.
+- **RESTful API Integration**: Communicates with the TaskTock backend to perform actions.
+
+## Tech Stack
+
+- **Angular**: Frontend framework for building the application.
+- **HTML/CSS/SCSS**: Used for building the UI and layout.
+- **TypeScript**: Strongly typed JavaScript used with Angular.
+- **RxJS**: For handling asynchronous data streams in the app.
+- **Bootstrap**: Used for styling and making the app responsive.
+
 # Client
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
