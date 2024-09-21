@@ -1,1 +1,13 @@
-<p>timer works!</p>
+<div class="clock-card">
+    <div class="time-display" [class.timer-active]="running">
+        <span class="display-label">TIME ELAPSED</span>
+        <div class="display-number">{{formatTime(timeElapsed)}}</div>
+    </div>
+    <button *ngIf="!running; else elseBlock" (click)="onClickPlus()">Start Timer</button>
+    <ng-template #elseBlock><button (click)="onClickStop()">Reset Timer</button></ng-template>
+</div>
+<ul class="time-listings" *ngIf="uploadedEntries.length > 0">
+    <li class="time-listing" *ngFor="let entry of uploadedEntries; index as i; trackBy: trackByFn" class="timer-entry">
+        {{ entry.prettyLength }}
+    </li>
+</ul>

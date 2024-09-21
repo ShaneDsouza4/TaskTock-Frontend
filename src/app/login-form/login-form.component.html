@@ -1,1 +1,8 @@
-<p>login-form works!</p>
+<div class="login-card card">
+    <h3 class="card-title">Log In</h3>
+    <form class="login-form" method="POST" [formGroup]="formGroup" (ngSubmit)="loginProcess()">
+        <input class="login-input login-email" placeholder="Email" name="email" formControlName="email" />
+        <input class="login-input login-password" placeholder="Password" type="password" formControlName="password" />
+        <input class="login-input login-submit" placeholder="" type="submit" />
+    </form>
+</div>

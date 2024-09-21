@@ -10,6 +10,9 @@ import { TimerComponent } from './timer/timer.component';
 import { CtaComponent } from './cta/cta.component';
 import { TimerPageComponent } from './timer-page/timer-page.component';
 import { ViewEntriesComponent } from './view-entries/view-entries.component';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
+import { TokenInterceptorService } from './token-interceptor.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,9 +27,18 @@ import { ViewEntriesComponent } from './view-entries/view-entries.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
