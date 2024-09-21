@@ -15,7 +15,9 @@ export class TimerComponent {
   entries: { startTime: Date, endTime: Date, length: number, prettyLength: string }[] = [];
   uploadedEntries: { length: number, prettyLength: string }[] = [];
 
-  constructor(private timerService: TimerServiceService) { }
+  constructor(
+    private timerService: TimerServiceService
+  ) { }
 
   formatTime(seconds: number) {
     const h = Math.floor(seconds / 3600);

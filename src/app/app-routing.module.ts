@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'login', component: LoginFormComponent },
   { path: 'register', component: RegisterFormComponent },
   { path: 'timer', component: TimerPageComponent },/* canActivate: [LoggedInGuardGuard] */
-  { path: 'workbook', component: ViewEntriesComponent },/* canActivate: [LoggedInGuardGuard] */
+  { path: 'taskbook', component: ViewEntriesComponent },/* canActivate: [LoggedInGuardGuard] */
   { path: '', component: LandingComponent }
 ];
 
